@@ -4,38 +4,114 @@
     <style>
         body {
             background-color: pink;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         .custom-text {
             font-size: 30px;
             color: #FFFFFF;
             font-family: 'Comic Sans MS', cursive, sans-serif;
+            position: relative;
+            z-index: 2;
         }
         a {
             color: #FFFFFF;
+            text-decoration: none;
+            position: relative;
+            z-index: 2;
         }
-
+        .button {
+            background-color: #FFFFFF;
+            color: pink;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            position: relative;
+            z-index: 2;
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(-45deg);
+        }
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+        .hearts-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
-    <p class="custom-text">
-        happy one month, sweet boy!!! <3<br>
-        here is your little gift, i really hope you will like it!<br>
-        <br>
-        <a href="https://open.spotify.com/playlist/0QbRaVCWcvUGd20mVK015p?si=c1f8fb7240174524&pt=84680bfc9c5f2005159df420eb14144a" target="_blank">
-            Click here to open the Spotify playlist
-        </a>
-        <br><br>
-        <img src="/C:/Users/ioana/Documents/IMG_2844.JPG" alt="1" width="300" height="300"><br>
+    <div class="hearts-container">
+        <div class="heart" style="top: 10%; left: 20%;"></div>
+        <div class="heart" style="top: 15%; left: 50%;"></div>
+        <div class="heart" style="top: 20%; left: 80%;"></div>
+        <div class="heart" style="top: 30%; left: 40%;"></div>
+        <div class="heart" style="top: 35%; left: 70%;"></div>
+        <div class="heart" style="top: 40%; left: 10%;"></div>
+        <div class="heart" style="top: 50%; left: 60%;"></div>
+        <div class="heart" style="top: 55%; left: 30%;"></div>
+        <div class="heart" style="top: 60%; left: 90%;"></div>
+        <div class="heart" style="top: 70%; left: 20%;"></div>
+        <div class="heart" style="top: 75%; left: 50%;"></div>
+        <div class="heart" style="top: 80%; left: 80%;"></div>
+        <div class="heart" style="top: 90%; left: 40%;"></div>
+        <div class="heart" style="top: 95%; left: 70%;"></div>
+    </div>
+    <div class="center-content">
         <p class="custom-text">
-            i am so glad i met you. ♡
-    </p>
-    <br>
-   <p class="custom-text">
-    p.s: read the first letters of the songs!<br>
-    p.p.s: i genuinely can't wait to see you again soon (imy)<br>
-    
-    your dear gf,<br>
-    val♡
-</p>
+            happy one month, my sweet bf!!💗<br>
+            would you like to see your gift?<br>
+            <br>
+            <button class="button" onclick="alert('ouch.')">no.</button>
+            <button class="button" onclick="openSpotify()">yes!!</button>
+            <br><br>
+            <img src="C:/Users/ioana/Documents/IMG_2844.JPG" alt="1" width="300" height="300"><br>
+            <p class="custom-text">
+                i am so glad i met you. ♡
+            </p>
+            <br>
+            <p class="custom-text">
+                p.s: read the first letters of the songs!<br>
+                p.p.s: i genuinely can't wait to see you again (soon) (imy)<br>
+                your dear gf,<br>
+                val♡
+            </p>
+        </p>
+    </div>
 </body>
+<script>
+    function openSpotify() {
+        window.open("https://open.spotify.com/playlist/0QbRaVCWcvUGd20mVK015p?si=c1f8fb7240174524&pt=84680bfc9c5f2005159df420eb14144a", "_blank");
+    }
+</script>
 </html>
